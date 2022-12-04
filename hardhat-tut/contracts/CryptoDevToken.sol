@@ -55,7 +55,7 @@ contract CryptoDevToken is ERC20, Ownable {
 
         address _owner = owner();
         (bool sent, ) = _owner.call{value: amount}("");
-        require(sent, "Failed to send Ether");
+        require(sent, "Failed to send Ether!");
     }
 
     receive() external payable {}
